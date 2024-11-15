@@ -1,0 +1,73 @@
+#script files
+src
+
+# Verschlüsselte Daten
+*.key
+*.pem
+*.pfx
+*.crt
+*.certbot
+
+*.build
+*.egg-info
+*.__pycache__
+
+# Kompilierte Dateien
+__pycache__
+*.py[cod]
+*$py.class
+*opnsense_helper.egg-info
+
+# Log-Dateien
+*.log
+config.xml
+# Temporäre Dateien
+*.tmp
+*.swp
+*.swo
+*.dist
+*.build
+# IDE-Spezifische Dateien
+.vscode/
+.idea/
+
+# Python-Verpackungen
+dist/
+build/
+*.egg-info
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Lokale Entwicklungsskripte
+*.pyc
+__init__.py*
+*.so
+*.dylib
+*.dll
+
+# Test-Ausgaben
+test_*.out
+*.test
+
+# Build-Dateien
+*.exe
+*.exe~
+*.bin
+*.class
+
+# Verschlüsselte Dateien
+*.gpg
+*.asc
+
+# Archivierte Dateien
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+
+# Docker-Dateien
+.DS_Store
+Thumbs.db
