@@ -5,9 +5,9 @@ import shutil
 import subprocess
 import json
 
-output = "/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/results"
+output = "/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/autodocs/autodocs"
 php_path="/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/php_docstrings"
-bashscript_path="/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/src/opnsense_scripts_autodoc/bashcripts"
+bashscript_path="/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/bashcript_docstrings"
 
 argparse_process = """
 import argparse
@@ -34,11 +34,23 @@ print(json.dumps(argObjects))
 
 
 def create_main_function(directory):
+    auto_module="""
+    """
     for root, dirs, files in os.walk(directory):
         print("------------------------")
         print(root)
         print("------------------------")
         subfolder_path = os.path.join(output, root.split("/")[-1])
+        module_path = subfolder_path.split("/")[-1]
+        print(module_path)
+        if (module_path!="opnsense_scripts_autodoc"):
+            auto_module+=f"""
+.. toctree:: {module_path}
+
+{module_path}
+======================================
+
+        """ 
         if not os.path.exists(subfolder_path):
             os.makedirs(subfolder_path)
         for file in files:
@@ -89,7 +101,7 @@ script {file}
 * {name} : {parameter["type"] if "type" in parameter and parameter["type"]!= None  else "str"}
     * Description: {parameter["descriptions"] if "descriptions" in parameter else "-"}""" 
                                 for key,value in parameter.items():
-                                    if(key in ["descriptions","type","dest"]):continue
+                                    if(key in ["descriptions","type","dest"] or value == None):continue
                                     string +=  f""" 
     * {key} : {value}"""
                                                           
@@ -97,15 +109,56 @@ script {file}
                             string +=  f"""
 None
                         """    
-                        string += "\"\"\""
+                        string += """
+\"\"\"                  """
                         with open(subfolder_path+"/"+file, 'w') as f:
                             f.write(string)
+                        auto_module += f"""    
+.. automodule:: {module_path}.{file.replace(".py","")}
+"""
                     except(subprocess.CalledProcessError) as err:
                         print( err)
             elif file.endswith('.sh'):
-                shutil.copy(bashscript_path+"/"+file, subfolder_path)
+                with open(bashscript_path+"/"+file, 'r') as f:
+                    content = f.read()
+                    string="""
+\"\"\""""
+                    string += content.replace("# ","").replace("#","")
+                    string = string.replace("!/bin/sh","")
+                    string = string.replace("---------------","------------------------------")
+                    string = string.replace(" script","script")
+                    string = string.replace(" --","--")
+                    string+="""
+\"\"\""""
+                    with open(subfolder_path+"/"+file.replace(".sh",".py"), 'w') as f:
+                        f.write(string)
+                #shutil.copy(bashscript_path+"/"+file, subfolder_path)
+                auto_module += f"""    
+.. automodule:: {module_path}.{file.replace(".sh","")}
+"""
             elif file.endswith('.php'):
-                shutil.copy(php_path+"/"+file,subfolder_path)
-
-directory = "./" #input("Geben Sie den Pfad zum Hauptverzeichnis ein: ")
+                with open(php_path+"/"+file, 'r') as f:
+                    content = f.read()
+                    content = content.split("\n")
+                    content= [line for line in content if line not in ["#!/usr/local/bin/php","<?php","/**"," */"]]
+                    content = [line.replace(" *", "", 1)[1:] for line in content]
+                    
+                    content.insert(0,"\"\"\"")
+                    string="\n".join(content)
+                    string =string.replace(" ---","---")
+                    string =string.replace("-------","----------------------------------").lstrip()
+                    
+                    # string =string.replace("Description*","*Description*").replace("Arguments","*Arguments*").replace("Returns","*Returns*")
+                    string+="""
+\"\"\""""
+                    with open(subfolder_path+"/"+file.replace(".php",".py"), 'w') as f:
+                        f.write(string)
+                #shutil.copy(php_path+"/"+file,subfolder_path)
+                auto_module += f"""
+.. automodule:: {module_path+"."+file.replace(".php","")}
+"""
+    print(auto_module)
+    with open(".docs/docs.rst", 'w') as f:
+        f.write(auto_module)
+directory = "./src/opnsense_scripts_autodoc" #input("Geben Sie den Pfad zum Hauptverzeichnis ein: ")
 create_main_function(directory)

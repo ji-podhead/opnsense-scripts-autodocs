@@ -1,0 +1,8 @@
+#
+#script check.sh (unbound)
+#   ---------------
+#
+# The script checks the Unbound configuration and outputs any error messages, but without the prefix lines that start with unbound-checkconf.
+# 
+# Uses:
+#  - /var/unbound/unbound.conf

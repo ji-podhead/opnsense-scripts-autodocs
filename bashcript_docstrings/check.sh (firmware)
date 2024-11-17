@@ -1,0 +1,14 @@
+#
+#script check.sh (firmware)
+#   ---------------
+#
+# Checks for updates and if a package is installed.
+# 
+# uses and overwrites the following files:
+#    - LICENSEFILE="/usr/local/opnsense/version/core.license"
+#    - JSONFILE="/tmp/pkg_upgrade.json"
+#    - OUTFILE="/tmp/pkg_update.out"
+# 
+# *Params*   -   ${1} : str
+#	- package name
+#

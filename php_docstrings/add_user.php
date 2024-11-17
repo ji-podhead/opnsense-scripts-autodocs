@@ -1,32 +1,17 @@
 #!/usr/local/bin/php
 <?php
 /**
- * script <name>.sh
+ * script add_user.php
  * ---------------
  * 
- * Briefly executes a specific task on the system.
- * 
- * This script does something
- * 
- * *Params*
- * 
- * - string_param : str
- *     index: 1
- *     A string parameter passed to the script
- *     
- * 
- * *Arguments*
- * 
- * - some_arg : int
- *     Some argument is an integer.
- *     default= 10
- * - another_arg : str
- *     Another argument is a string
- * 
- * 
- * *Returns*
- * 
- * - int
- *     Returns some_arg
+ * *Params*   
+ *    - $argv : array
+ *          - -h show this help text and exit"
+ *          - -u [required] username"
+ *          - -o origin (default=automation)"
+ *
+ * *Returns* 
+ *     -  str
+ *          - echos the status of the operation
  * 
  */

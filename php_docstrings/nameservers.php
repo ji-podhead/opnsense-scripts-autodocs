@@ -6,17 +6,11 @@
  *
  * Retrieves a list of nameservers.
  *
- * *Params*
+ * *Arguments* 
+ *     -  - argv[1] : bool
+ *     -      - Optional argument to specify whether to include additional information (default: false)
  * 
- * - None
- * 
- * *Arguments*
- * 
- * - argv[1] : bool
- *     Optional argument to specify whether to include additional information (default: false)
- * 
- * *Returns*
- * 
- * - string
- *     A JSON-encoded array containing the list of nameservers.
+ * *Returns* 
+ *    - string
+ *     -      -  A JSON-encoded array containing the list of nameservers.
  */

@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>opnsense-scripts-autodocs documentation &mdash; opnsense-scripts-autodoc 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=01f34227"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="auth" href="docs.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            opnsense-scripts-autodoc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">opnsense autodocs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">auth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-dhcp.cleanup_leases4">dhcp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-dns.query_dns">dns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-filter.kill_states">filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-firmware.changelog">firmware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-repos.FreeBSD">repos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-health.updaterrd">health</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#definitions">definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-interfaces.carp_global_status">interfaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-ipsec.get_legacy_vti">ipsec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-netflow.flush_all">netflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#openssh">openssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-openvpn.client_connect">openvpn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-routes.del_route">routes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#shaper">shaper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-shell.banner">shell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-suricata.listRuleMetadata">suricata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#syslog">syslog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-system.cpu">system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-unbound.cache">unbound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#wireguard">Wireguard</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">opnsense-scripts-autodoc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">opnsense-scripts-autodocs documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="opnsense-scripts-autodocs-documentation">
+<h1>opnsense-scripts-autodocs documentation<a class="headerlink" href="#opnsense-scripts-autodocs-documentation" title="Link to this heading"></a></h1>
+<p>Welcome to the OPNsense autodocs.
+Created using:</p>
+<blockquote>
+<div><ul>
+<li><p>a parser that fetches the argParse arguments using arguments</p></li>
+<li><p>bash and php sccripts where created with help of codeium
+- its just to much code for me
+- I checked most of the parameters needed if there are any</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>never the less theres still a room for missinpretation of missed constructor arguments for the scripts that where scanned manually</p></li>
+<li><p>unfortunately there are not a lot of classes involed and the way the scripts parse the arguments differ quite often</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>the goal of this project was to create an overview about the scripts, the required parameters and flags</p></li>
+</ul>
+</div></blockquote>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">opnsense autodocs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">auth</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-add-user-php">script add_user.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-list-group-members-php">script list_group_members.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-dhcp.cleanup_leases4">dhcp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-cleanup-leases4-php">script cleanup_leases4.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-cleanup-leases6-php">script cleanup_leases6.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-dnsmasq-watcher-py">script dnsmasq_watcher.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-get-kea-leases-py">script get_kea_leases.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-prefixes-sh">script prefixes.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#module-0">script prefixes.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-dns.query_dns">dns</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-query-dns-py">script query_dns.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-filter.kill_states">filter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-kill-states-py">script kill_states.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-list-states-py">script list_states.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-rollback-cancle-php">script rollback_cancle.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-rollback-timer-php">script rollback_timer.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-update-bogons-sh">script update_bogons.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-firmware.changelog">firmware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-changelog-sh">script changelog.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-env-init-sh">script env_init.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-connection-sh">script connection.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-details-sh">script details.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-health-sh">script health.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-hostnames-sh">script hostnames.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-install-sh">script install.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-latest-php">script latest.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-firmware-runner-sh">script firmware_runner.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-license-sh">script license.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-lock-sh">script lock.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-plugin-sh">script plugin.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-product-php">script product.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-query-sh">script query.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-read-sh">script read.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reboot-sh">script reboot.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-register-php">script register.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reinstall-sh">script reinstall.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-remove-sh">script remove.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-resync-sh">script resync.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-running-sh">script running.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-security-sh">script security.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-sync-sh">script sync.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-unlock-sh">script unlock.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-update-sh">script update.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-upgrade-sh">script upgrade.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-repos.FreeBSD">repos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-freebsd-php">script FreeBSD.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-opnsense-php">script OPNsense.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-health.updaterrd">health</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-updaterrd-php">script updaterrd.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#definitions">definitions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-interfaces.carp_global_status">interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-carp-global-status-php">script carp_global_status.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-carp-set-status-php">script carp_set_status.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-ifctl-sh">script ifctl.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reconfigure-gifs-php">script reconfigure_gifs.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reconfigure-gres-php">script reconfigure_gres.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reconfigure-laggs-php">script reconfigure_laggs.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reconfigure-neighbors-php">script reconfigure_neighbors.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reconfigure-vips-php">script reconfigure_vips.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-reconfigure-vlans-php">script reconfigure_vlans.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-rtsold-resolvconf-sh">script rtsold_resolvconf.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-traffic-stats-php">script traffic_stats.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-ipsec.get_legacy_vti">ipsec</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-get-legacy-vti-php">script get_legacy_vti.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-netflow.flush_all">netflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-flush-all-sh">script flush_all.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#openssh">openssh</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-openvpn.client_connect">openvpn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-client-connect-php">script client_connect.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-client-disconnect-sh">script client_disconnect.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-ovpn-service-control-php">script ovpn_service_control.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-tls-verify-php">script tls_verify.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-user-pass-verify-php">script user_pass_verify.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-routes.del_route">routes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-del-route-py">script del_route.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-gateway-status-php">script gateway_status.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-gateway-watcher-php">script gateway_watcher.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-gateways-php">script gateways.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#shaper">shaper</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-shell.banner">shell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-banner-php">script banner.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-defaults-php">script defaults.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-firmware-sh">script firmware.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-halt-php">script halt.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-password-php">script password.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-ping-php">script ping.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-netboot-php">script netboot.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-restore-sh">script restore.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-script-setaddr-php">script script setaddr.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-setports-php">script setports.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-suricata.listRuleMetadata">suricata</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-listrulemetadata-py">script listRuleMetadata.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-suricata-setup-sh">script suricata_setup.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#syslog">syslog</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-system.cpu">system</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-cpu-py">script cpu.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-nameservers-php">script nameservers.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-remote-backup-php">script remote_backup.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-ssl-ciphers-py">script ssl_ciphers.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-status-php">script status.php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-sysctl-py">script sysctl.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-temperature-sh">script temperature.sh</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#module-unbound.cache">unbound</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-cache-sh">script cache.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-logger-py">script logger.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-restore-db-py">script restore_db.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-start-sh">script start.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-stats-py">script stats.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs.html#script-wrapper-py">script wrapper.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html#wireguard">Wireguard</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="docs.html" class="btn btn-neutral float-right" title="auth" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

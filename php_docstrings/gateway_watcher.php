@@ -7,33 +7,21 @@
  * Dieses Script überwacht die Gateways und generiert Alarme, wenn ein Gateway nicht erreichbar ist.
  * 
  * *Params*
- * 
- * - $argv[1] : string
- *     Der Name der Aktion, die ausgeführt werden soll, wenn ein Alarm generiert wird.
- * 
- * *Returns*
- * 
- * - None
- * 
- * *Functions*
- * 
- * - signalhandler($signal) : Funktion, die aufgerufen wird, wenn ein Signal empfangen wird.
- * - dpinger_status() : Funktion, die den Status der Gateways zurückgibt.
- * - config_read_array($section, $key) : Funktion, die ein Array aus der Konfiguration zurückgibt.
- * - shell_safe($command, $args) : Funktion, die einen Befehl sicher ausführt.
- * - syslog($priority, $message) : Funktion, die eine Meldung in das Systemlog schreibt.
- * 
+ *     - $argv[1] : string
+ *          - the action to execute: `configd_run($action)`
+ *
+ * *Functions* 
+ *    - signalhandler($signal) : Function called when a signal is received.
+ *    - dpinger_status() : Function that returns the status of the gateways.
+ *    - config_read_array($section, $key) : Function that returns an array from the configuration.
+ *    - shell_safe($command, $args) : Function that safely executes a command.
+ *    - syslog($priority, $message) : Function that writes a message to the system log.
+ *
  * *Variables*
  * 
- * - $config : array
- *     Die Konfiguration des Systems.
- * - $mode : array
- *     Ein Array, das den Status der Gateways speichert.
- * - $poll : int
- *     Der Poll-Intervall in Sekunden.
- * - $wait : int
- *     Der Warte-Intervall in Sekunden.
- * - $alarm : bool
- *     Ein Flag, das anzeigt, ob ein Alarm generiert wurde.
- * 
+ *   - $config : array The system configuration.
+ *   - $mode : array An array that stores the status of the gateways.
+ *   - $poll : int The poll interval in seconds.
+ *   - $wait : int The wait interval in seconds.
+ *   - $alarm : bool A flag that indicates whether an alarm has been generated.
  */

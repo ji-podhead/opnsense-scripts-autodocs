@@ -3,25 +3,8 @@
 # script firmware.sh
 # ---------------
 #
-# Performs firmware actions.
-#
-# *Params*
-#
-#- None
-#
-# *Arguments*
-#
-#- None
-#
-# *Returns*
-#
-#- None
-#
-# Description:
-# This script performs firmware actions, such as fetching changelogs,
-# running updates, and performing upgrades.
-# It checks if an update or upgrade is available and prompts the user
-# to confirm whether to proceed.
+# This script performs firmware actions, such as fetching changelogs, running updates, and performing upgrades.
+# It checks if an update or upgrade is available and prompts the user to confirm whether to proceed.
 # If the user agrees, the update or upgrade is executed.
 #
 # Functions:

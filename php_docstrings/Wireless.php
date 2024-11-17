@@ -8,24 +8,18 @@
  * 
  * *Params*
  * 
- * - filename : str
- *     index: 1
- *     The filename of the RRD file.
+ *  - argsv[0] : str
+ *     - The filename of the RRD file.
  * 
- * *Arguments*
- * 
- * - None
- * 
- * *Returns*
- * 
- * - None
- * 
+ * *Arguments* 
+ *   -   None
+ *
  * *Datasets*
  * 
- * - snr : GAUGE
- *     Signal-to-Noise Ratio dataset.
- * - rate : GAUGE
- *     Data rate dataset.
- * - channel : GAUGE
- *     Channel dataset.
+ *   -   snr : GAUGE
+ *     - Signal-to-Noise Ratio dataset.
+ *   -   rate : GAUGE
+ *     - Data rate dataset.
+ *   -   channel : GAUGE
+ *     - Channel dataset.
  */

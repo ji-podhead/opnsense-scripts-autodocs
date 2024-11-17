@@ -1,26 +1,25 @@
+#!/bin/sh
+
+# script changelog.sh
+# ---------------
 #
-#script changelog.sh
-#---------------
+# Executes the main functionality of the changelog management program.
 #
-#This script does something.
+# *Params*
+#   - ${1} : str
+#       - Command to execute (fetch, cron, remove, list, url, html, text)
+#   - ${2} : str (optional)
+#       - Version number (required for html and text commands)
 #
-#*Params*
+# *Returns*
+#   - int
+#       - Exit status of the script (0 for success, non-zero for failure)
 #
-#- name : str
-#	index: 1
-#	The name of the script.
-#
-#*Arguments*
-#
-#- verbose : bool
-#	Enable verbose mode.
-#	default=False
-#- output_file : str
-#	The file to output to.
-#	default="output.txt"
-#
-#*Returns*
-#
-#- int
-#	The exit status of the script.
-#
+# *Commands*
+#   - fetch : Fetches the latest changelog from the remote repository.
+#   - cron : Fetches the latest changelog from the remote repository, pausing for at least 10 minutes spread out over the next 12 hours.
+#   - remove : Removes all changelog files from the destination directory.
+#   - list : Lists the contents of the index.json file.
+#   - url : Prints the URL of the remote changelog repository.
+#   - html : Prints the HTML changelog for the specified version.
+#   - text : Prints the text changelog for the specified version.

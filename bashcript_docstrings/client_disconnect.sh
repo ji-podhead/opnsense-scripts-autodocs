@@ -1,17 +1,8 @@
 #
-#script client_disconnect.sh
-#---------------
+# script client_disconnect.sh
+# ---------------
 #
-#*Params*
-#
-#- None
-#
-#*Arguments*
-#
-#- None
-#
-#*Returns*
-#
-#- int
-#    The exit status of the script.
+# *Returns*
+#   - int
+#      - The exit status of the script.
 #

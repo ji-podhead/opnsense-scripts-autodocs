@@ -5,20 +5,24 @@
  *
  * This script controls the Wireguard service, allowing for start, stop, restart, and configure actions.
  *
- * Usage:
+ * *Usage*
  *   php wg-service-control.php [-a] [-h] [stop|start|restart|configure] [uuid|vhid]
  *
- * Options:
- *   -a: Perform the action on all instances
- *   -h: Display this help message
+ * *Params* -   $argsv : array
+ *     -  - argsv[-2] : str
+ *     -    - action: stop|start|restart|configure
+ *     -  - argsv[-1] : str
+ *     -    - uuid|vhid: The UUID or vhid of the Wireguard instance
+ *     -  - -a: Perform the action on all instances
+ *     -  - -h: Display this help message
  *
- * Actions:
+ * *Actions*
  *   stop: Stop the Wireguard service
  *   start: Start the Wireguard service
  *   restart: Restart the Wireguard service
  *   configure: Configure the Wireguard service
  *
- * Parameters:
+ * *Parameters*
  *   uuid: The UUID of the Wireguard instance to control
  *   vhid: The vhid of the Wireguard instance to control
  */

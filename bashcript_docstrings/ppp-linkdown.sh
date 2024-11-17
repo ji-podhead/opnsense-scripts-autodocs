@@ -4,33 +4,19 @@
 #
 # Handles the link down event for a PPP interface.
 #
-# *Params*
-#
-#  1. IF: str
-#    The name of the PPP interface.
-#  2. AF: str
-#    The address family (inet or inet6).
-#
-# *Arguments*
-#
-#- None
-#
-# *Returns*
-#
-#- None
-#
-# Description:
-# This script handles the link down event for a PPP interface.
 # It shuts down the PPP connection using `ngctl`.
 # It performs different actions based on the address family:
 #  - For inet, it disables IPv4 forwarding and routing, and removes the IPv4 address.
 #  - For inet6, it disables IPv6 forwarding and routing, and removes the IPv6 address.
 # It also logs the uptime of the PPP connection and updates the uptime log file.
 #
-# Functions:
-#  - None
+# *Params*
+#  - {1}: str
+#       - The name of the PPP interface.
+#  - {2} : str
+#       - The address family (inet or inet6).
 #
-# Notes:
+# *Notes*
 #  - This script assumes that the necessary commands (`ngctl`, `ifctl`, `configctl`, `ppp-uptime.sh`) are available.
 #  - The script uses the `/conf/${IF}.log` file to log the uptime of the PPP connection.
 #  - The script uses the `/tmp/${IF}_uptime` file to store the uptime of the PPP connection.
