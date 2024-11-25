@@ -1,5 +1,11 @@
 
     
+.. toctree:: opnsense_scripts
+
+opnsense_scripts
+======================================
+
+        
 .. toctree:: auth
 
 auth

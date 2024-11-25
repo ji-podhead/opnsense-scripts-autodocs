@@ -7,7 +7,8 @@ src
 *.pfx
 *.crt
 *.certbot
-
+opnsense_scripts
+opnsense_models
 *.build
 *.egg-info
 *.__pycache__

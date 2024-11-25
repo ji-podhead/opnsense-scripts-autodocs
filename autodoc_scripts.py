@@ -5,9 +5,10 @@ import shutil
 import subprocess
 import json
 
-output = "/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/autodocs/autodocs"
-php_path="/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/php_docstrings"
-bashscript_path="/home/ji/Dokumente/ji-podhead/opnsense-scripts-autodoc/bashcript_docstrings"
+output = "./autodocs/scripts"
+php_path="./php_docstrings"
+bashscript_path="./bashcript_docstrings"
+directory = "./opnsense_scripts" #input("Geben Sie den Pfad zum Hauptverzeichnis ein: ")
 
 argparse_process = """
 import argparse
@@ -160,5 +161,4 @@ None
     print(auto_module)
     with open(".docs/docs.rst", 'w') as f:
         f.write(auto_module)
-directory = "./src/opnsense_scripts_autodoc" #input("Geben Sie den Pfad zum Hauptverzeichnis ein: ")
 create_main_function(directory)
